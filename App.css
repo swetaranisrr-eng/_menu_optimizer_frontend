@@ -1,0 +1,142 @@
+/* Full screen container */
+.hero-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background image */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  filter: blur(3px);
+  z-index: 0;
+}
+
+/* Main card */
+.hero-card {
+  position: relative;
+  z-index: 10;
+
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+
+  padding: 32px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 480px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Title */
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d97706;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #ddd;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #f97316;
+  transition: width 0.4s ease;
+}
+
+/* Step icon */
+.step-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.step-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 14px;
+  color: #444;
+}
+
+/* Inputs */
+.input-box {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #bbb;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-box:focus {
+  border-color: #f97316;
+}
+
+/* Button row */
+.button-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-back { background: #6b7280; }
+.btn-next { background: #f97316; }
+.btn-predict { background: #16a34a; }
+
+/* Spinner */
+.spinner {
+  margin: 20px auto;
+  width: 42px;
+  height: 42px;
+  border: 5px solid #f97316;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Prediction */
+.prediction-box {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.prediction-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #16a34a;
+  margin-top: 5px;
+}
+
+
